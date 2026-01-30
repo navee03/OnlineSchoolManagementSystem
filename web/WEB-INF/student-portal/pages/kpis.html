@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Statistics & KPIs</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/kpis.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Student Portal</h2>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="academic.html">Academic</a></li>
+            <li><a href="lifecycle.html">Lifecycle</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="kpis.html" class="active">Statistics</a></li>
+            <li><a href="chat.html">Chat</a></li>
+        </ul>
+    </aside>
+
+    <div class="with-sidebar">
+        <div class="page-wrapper">
+            <header class="top-bar">
+                <div>
+                    <h2>Statistics & KPIs</h2>
+                    <p class="sub">Live metrics pulled from your profile.</p>
+                </div>
+                <a href="dashboard.html" class="back-btn">← Dashboard</a>
+            </header>
+
+            <!-- KPI CARDS -->
+            <section class="kpi-grid">
+                <div class="kpi-card blue">
+                    <p>Highest Qualification</p>
+                    <h3>Undergraduate</h3>
+                </div>
+
+                <div class="kpi-card green">
+                    <p>Average GPA</p>
+                    <h3>8.2</h3>
+                </div>
+
+                <div class="kpi-card orange">
+                    <p>Exam Readiness</p>
+                    <h3>80%</h3>
+                </div>
+
+                <div class="kpi-card purple">
+                    <p>Risk Indicator</p>
+                    <h3>AMBER</h3>
+                </div>
+            </section>
+
+            <!-- APPLICATION STATS -->
+            <section class="card chart-card">
+                <h3>Application Progress</h3>
+
+                <div class="bar-chart">
+                    <div class="bar">
+                        <span style="height:70%"></span>
+                        <label>Applied</label>
+                    </div>
+                    <div class="bar">
+                        <span style="height:40%"></span>
+                        <label>Offers</label>
+                    </div>
+                    <div class="bar">
+                        <span style="height:20%"></span>
+                        <label>Accepted</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COMMUNICATION STATS -->
+            <section class="card comm-card">
+                <h3>Communication Stats</h3>
+                <p>Total Messages: <strong class="count" data-count="120">0</strong></p>
+                <p>Unread Messages: <strong class="count" data-count="4">0</strong></p>
+                <p>Avg Response Time: <strong>2 hrs</strong></p>
+            </section>
+
+            <!-- TIMELINE HEALTH -->
+            <section class="card timeline-card">
+                <h3>Timeline Health</h3>
+                <div class="health-strip green">On Track</div>
+            </section>
+        </div>
+    </div>
+
+    <script src="../js/animations.js"></script>
+    <script src="../js/kpis.js"></script>
+</body>
+
+</html>

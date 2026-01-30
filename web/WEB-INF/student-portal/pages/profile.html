@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Profile</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Student Portal</h2>
+
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="profile.html" class="active">Profile</a></li>
+            <li><a href="academic.html">Academic</a></li>
+            <li><a href="lifecycle.html">Lifecycle</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="kpis.html">Statistics</a></li>
+            <li><a href="chat.html">Chat</a></li>
+        </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="with-sidebar">
+        <div class="page-wrapper">
+            <header class="top-bar">
+                <div>
+                    <h2>Student Profile</h2>
+                    <p class="sub">Your identity and contact details.</p>
+                </div>
+                <a href="dashboard.html" class="back-btn">← Dashboard</a>
+            </header>
+
+            <!-- PROFILE CARD -->
+            <section class="card profile-card premium-fade">
+                <div class="profile-photo">
+                    <img src="../images/default-profile.svg" alt="Profile Photo">
+                    <span class="status-dot online"></span>
+                </div>
+
+                <div class="profile-info">
+                    <h3>John Doe</h3>
+                    <p class="sub">Student ID: <strong>STU12345</strong></p>
+
+                    <div class="info-grid">
+                        <div>
+                            <label>Email</label>
+                            <span>john@example.com</span>
+                        </div>
+                        <div>
+                            <label>Phone</label>
+                            <span>+91 9876543210</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-actions">
+                    <button class="btn primary">Edit Profile</button>
+                </div>
+            </section>
+
+            <!-- ADDITIONAL DETAILS -->
+            <section class="card additional-info premium-slide">
+                <h3>Additional Details</h3>
+
+                <div class="detail-grid">
+                    <div class="detail-box">
+                        <span class="icon">🌍</span>
+                        <div>
+                            <label>Country Preferences</label>
+                            <p>USA, Canada</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <span class="icon">📅</span>
+                        <div>
+                            <label>Intake</label>
+                            <p>Fall 2026</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <span class="icon">👨‍💼</span>
+                        <div>
+                            <label>Assigned Consultant</label>
+                            <p>Mr. Smith</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</body>
+
+</html>

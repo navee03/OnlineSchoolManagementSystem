@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Academic Background</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/academic.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Student Portal</h2>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="academic.html" class="active">Academic</a></li>
+            <li><a href="lifecycle.html">Lifecycle</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="kpis.html">Statistics</a></li>
+            <li><a href="chat.html">Chat</a></li>
+        </ul>
+    </aside>
+
+    <div class="with-sidebar">
+        <div class="page-wrapper">
+            <header class="top-bar">
+                <div>
+                    <h2>Academic Background</h2>
+                    <p class="sub">Keep your academic record clean and verified.</p>
+                </div>
+                <a class="back-btn" href="dashboard.html">← Dashboard</a>
+            </header>
+
+            <section class="card academic-form">
+
+                <!-- A. School / Pre-University -->
+                <h3>A. School / Pre-University</h3>
+                <div class="form-grid">
+                    <input type="text" placeholder="Institution Name">
+                    <input type="text" placeholder="Board / University">
+                    <input type="number" placeholder="Year of Completion">
+                    <input type="text" placeholder="Percentage / CGPA">
+                </div>
+
+                <!-- B. Undergraduate -->
+                <h3>B. Undergraduate</h3>
+                <div class="form-grid">
+                    <input type="text" placeholder="Degree">
+                    <input type="text" placeholder="Specialization">
+                    <input type="text" placeholder="University">
+                    <input type="number" placeholder="Year of Completion">
+                    <input type="text" placeholder="CGPA / Percentage">
+                </div>
+
+                <!-- C. Postgraduate -->
+                <h3>C. Postgraduate</h3>
+                <div class="form-grid">
+                    <input type="text" placeholder="Degree">
+                    <input type="text" placeholder="Specialization">
+                    <input type="text" placeholder="University">
+                    <input type="number" placeholder="Year of Completion">
+                    <input type="text" placeholder="CGPA">
+                </div>
+
+                <!-- D. Exams -->
+                <h3>D. Exams</h3>
+                <div class="form-grid">
+                    <select>
+                        <option>Select Exam</option>
+                        <option>IELTS</option>
+                        <option>TOEFL</option>
+                        <option>PTE</option>
+                        <option>GRE</option>
+                        <option>GMAT</option>
+                    </select>
+                    <input type="text" placeholder="Score">
+                    <input type="date" placeholder="Exam Date">
+                    <input type="date" placeholder="Valid Till">
+                </div>
+
+                <div class="rules-box">
+                    <div class="rules-header">
+                        <span class="rules-icon">📌</span>
+                        <h4>Academic Record Rules</h4>
+                    </div>
+
+                    <div class="rules-list">
+                        <div class="rule-item">
+                            <span class="rule-badge edit">Student</span>
+                            <p>Can view and edit academic details</p>
+                        </div>
+
+                        <div class="rule-item">
+                            <span class="rule-badge verify">Staff</span>
+                            <p>Can verify and lock records</p>
+                        </div>
+
+                        <div class="rule-item">
+                            <span class="rule-badge audit">System</span>
+                            <p>All changes are logged (audit trail)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-save">Save Changes</button>
+                    <button class="btn-lock" disabled>Verified & Locked (Staff)</button>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+</body>
+
+</html>

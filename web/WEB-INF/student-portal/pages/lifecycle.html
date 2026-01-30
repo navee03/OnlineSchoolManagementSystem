@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Lifecycle</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/lifecycle.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Student Portal</h2>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="academic.html">Academic</a></li>
+            <li><a href="lifecycle.html" class="active">Lifecycle</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="kpis.html">Statistics</a></li>
+            <li><a href="chat.html">Chat</a></li>
+        </ul>
+    </aside>
+
+    <!-- MAIN PAGE -->
+    <div class="with-sidebar">
+        <div class="page-wrapper">
+
+            <header class="page-header card premium-enter fade-up">
+                <div>
+                    <h2>Lifecycle Tracking</h2>
+                    <p class="sub">Your journey stages with health & risk insights.</p>
+                </div>
+                <a href="dashboard.html" class="back-btn">← Dashboard</a>
+            </header>
+
+            <!-- TIMELINE CARD -->
+            <section class="card lifecycle-timeline premium-card fade-up delay-1">
+                <div class="card-top">
+                    <h3>Application Lifecycle</h3>
+                    <span class="mini-chip amber">Active: Applications</span>
+                </div>
+
+                <div class="timeline" id="timeline">
+                    <div class="stage completed" data-stage="Profile Created">
+                        <span class="stage-icon">✓</span>
+                        <span class="stage-text">Profile Created</span>
+                    </div>
+
+                    <div class="stage completed" data-stage="Academic Verified">
+                        <span class="stage-icon">✓</span>
+                        <span class="stage-text">Academic Verified</span>
+                    </div>
+
+                    <div class="stage active" data-stage="University Applications">
+                        <span class="stage-icon glow-pulse">⏳</span>
+                        <span class="stage-text">University Applications</span>
+                    </div>
+
+                    <div class="stage" data-stage="Offer Letter">
+                        <span class="stage-icon soft">4</span>
+                        <span class="stage-text">Offer Letter</span>
+                    </div>
+
+                    <div class="stage" data-stage="Visa Processing">
+                        <span class="stage-icon soft">5</span>
+                        <span class="stage-text">Visa Processing</span>
+                    </div>
+
+                    <div class="stage" data-stage="Departure">
+                        <span class="stage-icon soft">6</span>
+                        <span class="stage-text">Departure</span>
+                    </div>
+                </div>
+
+                <div class="progress-wrap">
+                    <div class="progress-meta">
+                        <span>Overall progress</span>
+                        <strong id="progressPercent">55%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                        <div class="progress-glow"></div>
+                    </div>
+                </div>
+
+                <div class="hint">Tip: Click a stage to highlight.</div>
+            </section>
+
+            <!-- HEALTH CARD -->
+            <section class="card health-card premium-card fade-up delay-2">
+                <div class="card-top">
+                    <h3>Timeline Health</h3>
+                    <span class="mini-chip blue">Tracking</span>
+                </div>
+
+                <div class="health-grid">
+                    <div class="health-box green hover-lift">
+                        <p>Current Stage</p>
+                        <h4 id="currentStage">Applications</h4>
+                        <span class="tiny">Ongoing</span>
+                    </div>
+
+                    <div class="health-box amber hover-lift">
+                        <p>Stage Duration</p>
+                        <h4>18 Days</h4>
+                        <span class="tiny">Avg: 12 days</span>
+                    </div>
+
+                    <div class="health-box red hover-lift">
+                        <p>Delay vs Average</p>
+                        <h4>+6 Days</h4>
+                        <span class="tiny">Needs action</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RISK CARD -->
+            <section class="card risk-card premium-card fade-up delay-3">
+                <div class="card-top">
+                    <h3>Risk Indicator</h3>
+                    <span class="mini-chip amber pulse">AMBER</span>
+                </div>
+
+                <div class="risk-indicator amber shimmer">
+                    AMBER — Attention Required
+                </div>
+
+                <div class="risk-notes">
+                    <div class="note">
+                        <span class="note-dot amber"></span>
+                        <p><strong>Reason:</strong> Current stage duration is above average.</p>
+                    </div>
+                    <div class="note">
+                        <span class="note-dot green"></span>
+                        <p><strong>Fix:</strong> Complete pending documents & confirm shortlisted universities.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="../js/lifecycle.js"></script>
+</body>
+
+</html>

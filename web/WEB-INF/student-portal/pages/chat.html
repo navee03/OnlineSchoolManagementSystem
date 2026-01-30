@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Chat</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/chat.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+
+<body>
+
+    <div class="chat-wrapper">
+
+        <!-- HEADER -->
+        <header class="chat-header">
+            <a href="dashboard.html" class="back-btn">←</a>
+            <div>
+                <h3>Assigned Consultant</h3>
+                <span class="status online">Online</span>
+            </div>
+        </header>
+
+        <!-- MESSAGES -->
+        <div class="chat-body" id="chatBody">
+            <div class="message received">
+                Hello! I’ve reviewed your academic details.
+            </div>
+
+            <div class="message sent">
+                Thank you. Please let me know the next steps.
+            </div>
+
+            <div class="message received">
+                We’ll start university applications this week.
+            </div>
+        </div>
+
+        <!-- INPUT -->
+        <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button id="sendBtn">Send</button>
+        </div>
+
+    </div>
+
+    <script src="../js/chat.js"></script>
+</body>
+
+</html>
