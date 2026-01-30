@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Documents</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/documents.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Student Portal</h2>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="academic.html">Academic</a></li>
+            <li><a href="lifecycle.html">Lifecycle</a></li>
+            <li><a href="documents.html" class="active">Documents</a></li>
+            <li><a href="kpis.html">Statistics</a></li>
+            <li><a href="chat.html">Chat</a></li>
+        </ul>
+    </aside>
+
+    <div class="with-sidebar">
+        <div class="page-wrapper">
+            <header class="top-bar">
+                <div>
+                    <h2>Document Management</h2>
+                    <p class="sub">Upload and track every document in one place.</p>
+                </div>
+                <a href="dashboard.html" class="back-btn">← Dashboard</a>
+            </header>
+
+            <!-- DOCUMENT SUMMARY -->
+            <section class="card summary-card">
+                <div class="summary-box blue">
+                    Required<br><span class="count" data-count="12">0</span>
+                </div>
+                <div class="summary-box green">
+                    Uploaded<br><span class="count" data-count="9">0</span>
+                </div>
+                <div class="summary-box orange">
+                    Verified<br><span class="count" data-count="6">0</span>
+                </div>
+                <div class="summary-box red">
+                    Pending<br><span class="count" data-count="3">0</span>
+                </div>
+            </section>
+
+            <!-- DOCUMENT LIST -->
+            <section class="card document-list">
+                <h3>Permanent Documents</h3>
+
+                <div class="doc-row verified">
+                    <span>Passport</span>
+                    <span>Verified</span>
+                </div>
+
+                <div class="doc-row verified">
+                    <span>Academic Transcripts</span>
+                    <span>Verified</span>
+                </div>
+
+                <div class="doc-row pending">
+                    <span>Statement of Purpose</span>
+                    <span>Pending</span>
+                </div>
+
+                <div class="doc-row expiring">
+                    <span>IELTS Score Card</span>
+                    <span>Expiring Soon</span>
+                </div>
+            </section>
+
+            <!-- UPLOAD SECTION -->
+            <section class="card upload-card">
+                <div>
+                    <h3>Upload New Documents</h3>
+                    <p class="sub">Add PDFs, images, or scanned copies for review.</p>
+                </div>
+
+                <div class="upload-row">
+                    <input type="file" id="uploadInput" multiple>
+                    <button class="action-btn primary" id="uploadBtn">Upload</button>
+                </div>
+
+                <div class="upload-list" id="uploadList">
+                    <div class="upload-item">
+                        <span>Bonafide Certificate</span>
+                        <span class="status-pill success">Uploaded</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="../js/animations.js"></script>
+    <script src="../js/documents.js"></script>
+</body>
+
+</html>

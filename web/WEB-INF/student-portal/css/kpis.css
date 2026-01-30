@@ -1,0 +1,57 @@
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.kpi-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 18px;
+    border: var(--border);
+    box-shadow: var(--shadow-soft);
+}
+
+.kpi-card.blue { background: rgba(89, 140, 246, 0.12); }
+.kpi-card.green { background: rgba(65, 195, 143, 0.12); }
+.kpi-card.orange { background: rgba(243, 164, 91, 0.14); }
+.kpi-card.purple { background: rgba(145, 104, 255, 0.14); }
+
+.bar-chart {
+    display: flex;
+    gap: 16px;
+    align-items: flex-end;
+    height: 180px;
+    margin-top: 20px;
+}
+
+.bar {
+    flex: 1;
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+
+.bar span {
+    width: 36px;
+    background: linear-gradient(180deg, #6c63ff, #f171b5);
+    border-radius: 16px;
+}
+
+.comm-card p {
+    margin-top: 8px;
+}
+
+.timeline-card {
+    margin-top: 20px;
+}
+
+.health-strip {
+    margin-top: 12px;
+    padding: 12px 16px;
+    border-radius: 999px;
+    background: rgba(65, 195, 143, 0.2);
+    color: #1c8a60;
+    font-weight: 600;
+}

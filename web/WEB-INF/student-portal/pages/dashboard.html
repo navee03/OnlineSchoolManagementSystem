@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Student Portal</h2>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="academic.html">Academic</a></li>
+            <li><a href="lifecycle.html">Lifecycle</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="kpis.html">Statistics</a></li>
+            <li><a href="chat.html">Chat</a></li>
+        </ul>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="with-sidebar">
+        <div class="page-wrapper">
+
+            <!-- TOP HEADER -->
+            <header class="dash-header premium-enter fade-up">
+                <div class="dash-header__left">
+                    <h2>Dashboard</h2>
+                    <p class="sub">Overview of your profile, progress & quick actions.</p>
+                </div>
+
+                <div class="dash-header__right">
+                    <button class="icon-btn" id="btnNotify" title="Notifications">
+                        <span class="icon">🔔</span>
+                        <span class="dot" id="notifyDot"></span>
+                    </button>
+
+                    <button class="pill-btn" id="btnQuickEdit">Quick Edit</button>
+
+                    <a class="pill-btn ghost" href="profile.html">Open Profile →</a>
+                </div>
+            </header>
+
+            <!-- GRID -->
+            <section class="dash-grid">
+
+                <!-- PROFILE SNAPSHOT (PREMIUM) -->
+                <article class="card premium-card profile-snap fade-up delay-1" id="profileSnap">
+                    <div class="snap-top">
+                        <div class="snap-user">
+                            <div class="avatar-wrap">
+                                <div class="avatar" id="avatar">
+                                    <span id="avatarText">NS</span>
+                                </div>
+                                <span class="status-pill live">Active</span>
+                            </div>
+
+                            <div class="user-meta">
+                                <h3 id="studentName">Naveen S</h3>
+                                <div class="meta-row">
+                                    <span class="mini-chip blue" id="studentId">ID: STU-1029</span>
+                                    <span class="mini-chip violet" id="dept">CSE</span>
+                                    <span class="mini-chip teal" id="year">Year: 3</span>
+                                </div>
+                                <p class="muted" id="tagline">Keep your profile strong — complete pending sections.</p>
+                            </div>
+                        </div>
+
+                        <!-- PROGRESS RING -->
+                        <div class="ring-wrap" title="Profile Completion">
+                            <svg class="ring" width="90" height="90" viewBox="0 0 120 120"
+                                aria-label="Profile completion">
+                                <circle class="ring-bg" cx="60" cy="60" r="46"></circle>
+                                <circle class="ring-fg" id="ringFg" cx="60" cy="60" r="46"></circle>
+                            </svg>
+                            <div class="ring-center">
+                                <strong id="ringPct">78%</strong>
+                                <span>Profile</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="snap-divider"></div>
+
+                    <!-- QUICK STATS -->
+                    <div class="snap-stats">
+                        <div class="stat hover-lift">
+                            <span class="stat-label">Attendance</span>
+                            <strong class="stat-value" id="att">92%</strong>
+                            <span class="stat-sub good">Excellent</span>
+                        </div>
+
+                        <div class="stat hover-lift">
+                            <span class="stat-label">CGPA</span>
+                            <strong class="stat-value" id="cgpa">8.4</strong>
+                            <span class="stat-sub good">On Track</span>
+                        </div>
+
+                        <div class="stat hover-lift">
+                            <span class="stat-label">Backlogs</span>
+                            <strong class="stat-value" id="backlogs">0</strong>
+                            <span class="stat-sub neutral">Clear</span>
+                        </div>
+                    </div>
+
+                    <!-- ACTIONS -->
+                    <div class="snap-actions">
+                        <button class="action-btn primary" id="btnCompleteProfile">
+                            <span class="a-ico">⚡</span>
+                            Complete Profile
+                        </button>
+
+                        <button class="action-btn" id="btnDownloadCard">
+                            <span class="a-ico">⬇️</span>
+                            Download ID (UI)
+                        </button>
+
+                        <button class="action-btn" id="btnHighlight">
+                            <span class="a-ico">✨</span>
+                            Highlight
+                        </button>
+                    </div>
+
+                    <!-- PREMIUM GLOW STRIP -->
+                    <div class="glow-strip"></div>
+                </article>
+
+                <!-- RIGHT SIDE: KPI PREVIEW -->
+                <article class="card premium-card fade-up delay-2">
+                    <div class="card-top">
+                        <h3>Today’s Snapshot</h3>
+                        <span class="mini-chip amber pulse">Live</span>
+                    </div>
+
+                    <div class="mini-grid">
+                        <div class="mini-box soft hover-lift">
+                            <p>Pending Docs</p>
+                            <h4 id="pendingDocs">2</h4>
+                            <span class="tiny">Upload soon</span>
+                        </div>
+
+                        <div class="mini-box blue hover-lift">
+                            <p>Next Deadline</p>
+                            <h4 id="deadline">3 Days</h4>
+                            <span class="tiny">Assignment</span>
+                        </div>
+
+                        <div class="mini-box green hover-lift">
+                            <p>Performance</p>
+                            <h4 id="perf">Good</h4>
+                            <span class="tiny">Stable</span>
+                        </div>
+
+                        <div class="mini-box amber hover-lift">
+                            <p>Risk</p>
+                            <h4 id="risk">Low</h4>
+                            <span class="tiny">Safe</span>
+                        </div>
+                    </div>
+
+                    <div class="soft-banner shimmer" id="banner">
+                        <strong>Tip:</strong> Update Academic & upload documents to keep risk low.
+                    </div>
+
+                    <div class="quick-links">
+                        <a class="ql" href="academic.html">Go Academic →</a>
+                        <a class="ql" href="lifecycle.html">Go Lifecycle →</a>
+                        <a class="ql" href="kpis.html">Go Statistics →</a>
+                    </div>
+                </article>
+
+                <!-- LOWER LEFT: RECENT ACTIVITY -->
+                <article class="card premium-card fade-up delay-3">
+                    <div class="card-top">
+                        <h3>Recent Activity</h3>
+                        <span class="mini-chip blue">Auto</span>
+                    </div>
+
+                    <ul class="activity">
+                        <li class="act">
+                            <span class="act-dot green"></span>
+                            <div>
+                                <p><strong>Profile updated</strong> — Phone number verified</p>
+                                <span class="tiny">Today • 10:20 AM</span>
+                            </div>
+                        </li>
+
+                        <li class="act">
+                            <span class="act-dot amber"></span>
+                            <div>
+                                <p><strong>Documents pending</strong> — Upload Bonafide</p>
+                                <span class="tiny">Yesterday • 6:40 PM</span>
+                            </div>
+                        </li>
+
+                        <li class="act">
+                            <span class="act-dot blue"></span>
+                            <div>
+                                <p><strong>Academic synced</strong> — Sem 5 marks saved</p>
+                                <span class="tiny">2 days ago</span>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- LOWER RIGHT: QUICK NOTES -->
+                <article class="card premium-card fade-up delay-4">
+                    <div class="card-top">
+                        <h3>Quick Notes</h3>
+                        <span class="mini-chip violet">Local</span>
+                    </div>
+
+                    <div class="notes">
+                        <textarea id="notesBox" placeholder="Write a quick reminder here..."></textarea>
+                        <div class="notes-actions">
+                            <button class="action-btn primary" id="btnSaveNotes">Save</button>
+                            <button class="action-btn" id="btnClearNotes">Clear</button>
+                        </div>
+                        <p class="tiny muted">Notes save in browser (frontend only).</p>
+                    </div>
+                </article>
+
+            </section>
+        </div>
+    </div>
+
+    <!-- MODAL: QUICK EDIT -->
+    <div class="modal" id="editModal" aria-hidden="true">
+        <div class="modal-card">
+            <div class="modal-top">
+                <h3>Quick Edit (UI)</h3>
+                <button class="icon-btn" id="btnCloseModal" title="Close">✖</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="field">
+                    <label>Student Name</label>
+                    <input type="text" id="inpName" placeholder="Enter name" />
+                </div>
+
+                <div class="field">
+                    <label>Department</label>
+                    <input type="text" id="inpDept" placeholder="Eg: CSE" />
+                </div>
+
+                <div class="field">
+                    <label>Year</label>
+                    <input type="text" id="inpYear" placeholder="Eg: 3" />
+                </div>
+
+                <div class="field">
+                    <label>Profile Completion (%)</label>
+                    <input type="number" id="inpPct" min="0" max="100" placeholder="0 - 100" />
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button class="action-btn" id="btnReset">Reset</button>
+                <button class="action-btn primary" id="btnApply">Apply Changes</button>
+            </div>
+
+            <p class="tiny muted">Frontend only — for premium UI interaction.</p>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+
+</html>
